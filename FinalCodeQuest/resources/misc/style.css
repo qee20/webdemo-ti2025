@@ -1,0 +1,15 @@
+body{
+  background-image: url('../images/logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10vh;
+  width: 10vh;
+  margin: 0;
+  padding: 0;
+}
+
+.logoimage{
+  width: 100px;
+  margin: 10px;
+}
