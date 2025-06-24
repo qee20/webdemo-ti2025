@@ -14,10 +14,10 @@ const products = [
 let cart = []
 
 const productsGrid = document.getElementById('productsGrid')
-const cartItems = document.getElementById('cartItems');
-const cartTotal = document.getElementById('cartTotal');
-const checkoutBtn = document.getElementById('checkoutBtn');
-const resetCartBtn = document.getElementById('resetcart');
+const cartItems = document.getElementById('cartItems')
+const cartTotal = document.getElementById('cartTotal')
+const checkoutBtn = document.getElementById('checkoutBtn')
+const resetCartBtn = document.getElementById('resetcart')
 
 document.addEventListener('DOMContentLoaded', function () {
     renderProductList()
@@ -36,7 +36,7 @@ function renderProductList() {
         <img src=${product.imgfile}>
         <p class="product-price">${formatRupiah(product.price)}</p>
         <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-        `;
+        `
         productsGrid.appendChild(productCard)
     })
 
@@ -46,35 +46,69 @@ function renderProductList() {
 }
 
 function addToCart(e) {
-   //Yeet!
-   console.log("Yeet");
+    const productId = parseInt(e.target.dataset.id)
+    const product = products.find(p => p.id === productId)
+
+    const itemInCart = cart.find(item => item.id === product.id)
+    if (itemInCart) {
+        itemInCart.qty++
+    } else {
+        cart.push({ ...product, qty: 1 })
+    }
+
+    saveToLocalStrg()
+    renderCart()
 }
 
+function renderCart() {
+    cartItems.innerHTML = ''
+    if (cart.length === 0) {
+        cartItems.innerHTML = `<p class="empty-cart">Keranjang kosong</p>`
+        cartTotal.textContent = formatRupiah(0)
+        return
+    }
 
-function renderCart(){
-    //Yeet!
-   console.log("Yeet");
+    cart.forEach(item => {
+        const div = document.createElement('div')
+        div.className = 'cart-item'
+        div.innerHTML = `
+            <p>${item.name} x${item.qty}</p>
+            <p>${formatRupiah(item.price * item.qty)}</p>
+        `
+        cartItems.appendChild(div)
+    })
+
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0)
+    cartTotal.textContent = formatRupiah(total)
 }
 
 function saveToLocalStrg() {
-    //Yeet!
-   console.log("Yeet");
+    localStorage.setItem('cart', JSON.stringify(cart))
 }
 
 function loadFromLocalStrg() {
-    //Yeet!
-   console.log("Yeet");
+    const saved = localStorage.getItem('cart')
+    if (saved) {
+        cart = JSON.parse(saved)
+    }
 }
 
-resetCartBtn.addEventListener('click', function(){
-    //Yeet!
-   console.log("Yeet");
+resetCartBtn.addEventListener('click', function () {
+    cart = []
+    saveToLocalStrg()
+    renderCart()
+})
+
+// Tombol checkout: arahkan ke halaman invoice
+checkoutBtn.addEventListener('click', function () {
+    localStorage.setItem('checkoutCart', JSON.stringify(cart))
+    window.location.href = 'checkout.html'
 })
 
 function formatRupiah(amount) {
-  return new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0
-  }).format(amount);
+    return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+    }).format(amount)
 }
