@@ -4,15 +4,16 @@
     }
     
     // Sample order data (in a real app, this would come from your cart)
-    const orderItems = [
-      { id: 'prd001', name: 'Mechanical Keyboard X100', price: 768999, qty: 1 },
-      { id: 'prd002', name: 'ProGaming Mouse Z5', price: 245999, qty: 2 },
-      { id: 'prd003', name: 'Surround Sound Headset H7', price: 1489500, qty: 1 }
-    ];
+    const orderItems = loadOrderFromLocalStorage();
     
     // Calculate order total
     function calculateTotal() {
       return orderItems.reduce((total, item) => total + (item.price * item.qty), 0);
+    }
+
+    function loadOrderFromLocalStorage() {
+      const data = localStorage.getItem('cart');
+      return data ? JSON.parse(data) : [];
     }
     
     // Handle form submission
