@@ -1,0 +1,159 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  padding: 0 20px;
+}
+ 
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  border-bottom: 2px solid #444;
+}
+ 
+.logoimage {
+  height: 50px;
+}
+ 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+ 
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+ 
+nav ul li a:hover {
+  color: #00ffcc;
+}
+ 
+/* Hero Section */
+section:first-of-type {
+  text-align: center;
+  padding: 50px 0;
+}
+ 
+.heroMainImg {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+ 
+.specialBtn button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+ 
+.specialBtn button:hover {
+  background-color: #00bfa6;
+}
+ 
+/* Sections */
+section {
+  padding: 40px 0;
+}
+ 
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #00ffcc;
+}
+ 
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+ 
+/* Featured Products */
+.highlightproduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+ 
+.imgproduct img,
+.imgproduct {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+ 
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+ 
+blockquote {
+  background-color: #262626;
+  padding: 20px;
+  border-left: 5px solid #00ffcc;
+  font-style: italic;
+  border-radius: 8px;
+}
+ 
+blockquote div {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ccc;
+}
+ 
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
+ 
+footer p {
+  margin-bottom: 5px;
+}
+ 
+/* Responsive */
+@media (max-width: 768px) {
+  .highlightproduct {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+ 
