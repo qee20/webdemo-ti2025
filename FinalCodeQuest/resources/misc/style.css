@@ -1,0 +1,46 @@
+header {
+    background-color: rgb(158, 192, 255);
+}
+ 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.logo {
+    color: aliceblue;
+    margin-left: 10px;
+}
+.logoimage{
+    width: 100px;
+    border-radius: 10px;
+}
+ul li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 10px;
+}
+ 
+ul li a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: aliceblue;
+}
+ul li:hover{
+    background-color: rgb(70, 116, 243);
+    border-radius: 10px;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width :550px){
+    ul{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
