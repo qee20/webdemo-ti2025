@@ -1,0 +1,181 @@
+:root {
+  --primary: #9c27b0;
+  --secondary: #03a9f4;
+  --bg-dark: #0d0d2b;
+  --text: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgba(13, 13, 43, 0.9);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoimage {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--secondary);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(3, 169, 244, 0.2);
+}
+
+.customer-form {
+  margin-bottom: 40px;
+}
+
+.customer-form h2 {
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #bbb;
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #7b1fa2;
+}
+
+.invoice-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(155, 39, 176, 0.3);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.invoice-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.invoice-body {
+  margin-top: 10px;
+}
+
+.customer-info h3 {
+  color: var(--secondary);
+}
+
+.order-items {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order-items th,
+.order-items td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-items thead {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.total-row td {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.invoice-footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #ccc;
+}
+
+.print-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.print-btn:hover {
+  background-color: #0288d1;
+}
