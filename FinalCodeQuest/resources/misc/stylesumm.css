@@ -1,0 +1,171 @@
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+ 
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+ 
+.logoimage {
+    max-width: 150px;
+}
+ 
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+ 
+nav ul li {
+    margin: 0 15px;
+}
+ 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+
+.customer-form {
+    margin-bottom: 20px;
+}
+ 
+.form-group {
+    margin-bottom: 15px;
+}
+ 
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+ 
+textarea {
+    resize: vertical;
+}
+ 
+.submit-btn {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+ 
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+.invoice-container {
+    display: none; 
+    margin-top: 20px;
+}
+ 
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+ 
+.invoice-title {
+    font-size: 24px;
+    color: #007BFF;
+}
+ 
+.invoice-details {
+    text-align: right;
+}
+ 
+.invoice-body {
+    margin-top: 20px;
+}
+ 
+.customer-info {
+    margin-bottom: 20px;
+}
+ 
+.order-items {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+.order-items th,
+.order-items td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+ 
+.order-items th {
+    background: #f4f4f4;
+}
+ 
+.text-right {
+    text-align: right;
+}
+ 
+.total-row {
+    font-weight: bold;
+}
+ 
+
+.invoice-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+ 
+.print-btn {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+ 
+.print-btn:hover {
+    background: #218838;
+}
+ 
