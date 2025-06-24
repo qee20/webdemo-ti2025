@@ -1,0 +1,30 @@
+header {
+  background-color: black;
+  height: 60px;
+}
+
+nav {
+  display: flex;
+}
+
+ul {
+  justify-content: right;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  align-items: right;
+}
+
+.logoimage {
+  width: 70px;
+  padding-left: 10px;
+  padding-top: 8px;
+}
