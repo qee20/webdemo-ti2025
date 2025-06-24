@@ -1,0 +1,22 @@
+.logoimage{
+    width: 100px;
+    height: 60px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+header{
+    background-color: rgb(47, 47, 170);
+    height: 70px;
+}
+
+li{
+    list-style: none;
+    
+}
+nav{
+    display: flex;
+    justify-content: right;
+    color: black;
+    margin-top: 0px;
+}
+
