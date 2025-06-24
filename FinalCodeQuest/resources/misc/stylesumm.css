@@ -1,0 +1,129 @@
+:root {
+    --primary: #1f6feb;
+    --secondary: #f6f8fa;
+    --text-color: #24292e;
+    --border-color: #d0d7de;
+    --bg-white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+  }
+  body {
+    background-color: var(--secondary);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-white);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow);
+    margin-bottom: 30px;
+  }
+  .logoimage {
+    height: 50px;
+  }
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #143f8a;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow);
+  }
+  .customer-form {
+    margin-bottom: 40px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  .submit-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .submit-btn:hover {
+    background-color: #144fc6;
+  }
+  .invoice-container {
+    display: none;
+    margin-top: 30px;
+  }
+  .invoice-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .invoice-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .invoice-body {
+    margin-bottom: 30px;
+  }
+  .customer-info p {
+    margin: 5px 0;
+  }
+  .order-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  .order-items th, .order-items td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+  }
+  .order-items th {
+    background-color: var(--secondary);
+    font-weight: bold;
+  }
+  .order-items .text-right {
+    text-align: right;
+  }
+  .total-row td {
+    font-weight: bold;
+    background-color: #143f8a;
+  }
