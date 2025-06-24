@@ -7,7 +7,7 @@ body {
 }
  
 header {
-    background: #222;
+    background: #fac473;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -35,7 +35,7 @@ nav ul li a {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background: #007bff;
+    background: #9bcbff;
     color: white;
 }
  
@@ -46,7 +46,7 @@ nav ul li a {
 .specialBtn button {
     padding: 10px 20px;
     font-size: 1.2em;
-    background: #ffcc00;
+    background: #fff1ba;
     border: none;
     cursor: pointer;
 }
@@ -84,13 +84,13 @@ nav ul li a {
 }
  
 footer {
-    background: #222;
+    background: #f5c74a;
     color: #fff;
     text-align: center;
     padding: 20px;
 }
  
 footer a {
-    color: #ffcc00;
+    color: #ffd67e;
     text-decoration: none;
 }
