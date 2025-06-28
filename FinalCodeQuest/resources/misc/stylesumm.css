@@ -1,0 +1,265 @@
+:root {
+  --primary: #656fff;
+  --secondary: #ff3366;
+  --background: #121224;
+  --background-alt: #1a1a2e;
+  --text-light: #eee;
+  --text-muted: #a0a0a0;
+  --border-color: #0400ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--text-light);
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  color: #A3C4F3;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #9abae7;
+  border-bottom: 2px solid var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logoimage {
+  width: 130px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ffffff; /* Teks putih untuk navi*/
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #010036; /* Kuning saat hover */
+}
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Customer Form */
+.customer-form {
+  background: var(--background-alt);
+  padding: 30px 40px;
+  border-radius: 15px;
+}
+
+.customer-form h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  background-color: #222;
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--secondary);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  box-shadow: 0 0 15px var(--primary);
+}
+
+/* Invoice Container */
+.invoice-container {
+  background: var(--background-alt);
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px var(--primary);
+  display: none; /* awalnya disembunyikan */
+  flex-direction: column;
+  gap: 25px;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 15px;
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.invoice-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.invoice-details div {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.invoice-body {
+  color: var(--text-light);
+}
+
+.customer-info p {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.order-items {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.order-items th,
+.order-items td {
+  border: 1px solid var(--primary);
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.order-items th {
+  background: var(--background);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.order-items .text-right {
+  text-align: right;
+}
+
+.total-row td {
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: var(--background);
+  color: var(--secondary);
+  text-shadow: 0 0 6px var(--secondary);
+}
+
+.invoice-footer {
+  text-align: center;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px var(--primary);
+  margin-top: 20px;
+}
+
+.print-btn {
+  margin-top: 15px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #111;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--secondary);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.print-btn:hover,
+.print-btn:focus {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  box-shadow: 0 0 15px var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 15px 40px;
+    padding: 0 10px;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .invoice-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-items th,
+  .order-items td {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .submit-btn,
+  .print-btn {
+    width: 100%;
+  }
+}
