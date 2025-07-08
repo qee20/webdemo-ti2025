@@ -10,16 +10,38 @@ const addOnProducts = [
 
 // Get the selected product from localStorage
 const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+const selectedproductdisplay = document.getElementById('selected-product-display')
+const addoncheckboxes = document.getElementById('addon-checkboxes')
+const summarydisplay = document.getElementById('summary-display')
+const confirmorder = document.getElementById('confirm-order')
+
 let selectedAddons = [];
 
 // Display the selected laptop
 function displaySelectedProduct() {
-    
+   
 }
 
 // Display addon checkboxes
 function displayAddonProducts() {
-   
+    const productContainer = document.getElementById('addon-checkboxes')
+    productContainer.innerHTML = ''
+
+    addoncheckboxes.forEach(product => {
+        const productCard = document.createElement('div')
+        productCard.className = 'product-card'
+        productCard.innerHTML = `
+        <div>
+        <img class="productimg" src=${product.imgfile}>
+        <h3>${product.name}</h3>
+        </div>
+        <div>
+        <p class="product-price">${formatRupiah(product.price)}</p>
+        <button class="catbtn" data-id="${product.id}">Pre Order</button>
+        </div>
+        `;
+        productContainer.appendChild(productCard)
+    })
 }
 
 // Update the order summary
