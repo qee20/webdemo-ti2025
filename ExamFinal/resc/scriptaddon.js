@@ -13,8 +13,9 @@ const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
 let selectedAddons = [];
 
 // Display the selected laptop
-function displaySelectedProduct() {
-    
+function displaySelectedProduct(name, price) {
+    localStorage.setItem('selectProduct', JSON.stringify({name,price}));
+    window.location.href="addon.html";
 }
 
 // Display addon checkboxes
@@ -24,7 +25,8 @@ function displayAddonProducts() {
 
 // Update the order summary
 function updateOrderSummary() {
-    
+    localStorage.setItem('orderData', stringify({...selectedAddons, addons, total}));
+    window.location.href="summary.html";
 }
 
 // Confirm order button
