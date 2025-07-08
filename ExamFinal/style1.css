@@ -1,0 +1,108 @@
+header{
+    background-color: #0d5c02;
+    color: #19680f;
+    padding: 20px 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:3px ;
+}
+
+.logoimage {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:  30px;
+}
+
+nav ul li a {
+    color:white ;
+    font-weight: 600px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: serif;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: orangered;
+    border: 10px;
+    border-radius: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    color: black;
+}
+
+.formcontainer{
+    max-width: 1200px;
+    margin: 0px;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.customer-form{
+    background: var(background-alt);
+    padding: 30px 40px;
+    border-radius: 30px;
+}
+
+.form-group{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea{
+    padding:12px 20px ;
+    border-radius: 0px;
+}
+.submit-btn{
+    background:orangered;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    padding: 20px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    transition:background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus{
+    background:rgb(0, 0, 0);
+    color: orangered;
+}
+
+footer{
+    background-color: #000000;
+    color: #fc6006;
+    padding: 20px 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:3px ;
+}
+
+footer p{
+    background-color: #000000;
+    color: #fc6006;
+    padding: 20px 50px;
+    border-bottom:3px ;
+}
+

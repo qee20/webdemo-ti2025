@@ -11,14 +11,29 @@ const addOnProducts = [
 // Get the selected product from localStorage
 const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
 let selectedAddons = [];
+const productgrid = document.getElementById("productgrid");
+const cartItemcontainer = document.getElementById("cartItemcontainer");
+const cartTotaldisplay = document.getElementById("cartTotaldisplay");
+const resertCartBtn = document.getElementById("resertCartBtn");
+let cart = {};
+
 
 // Display the selected laptop
 function displaySelectedProduct() {
-    
+    productgrid.innerHTML = " ";
+    addOnProducts.forEach(addOnProducts =>{
+        const card = document.createElement("div")
+        card.classList.add(addon-checkboxes)
+    })   
 }
 
 // Display addon checkboxes
 function displayAddonProducts() {
+    productgrid.innerHTML = " ";
+    addOnProducts.forEach(addOnProducts =>{
+        const card = document.createElement("div")
+        card.classList.add(addon-checkboxes)
+    })
    
 }
 

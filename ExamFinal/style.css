@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+body {
+    background-color: #ffffff;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #0d5c02;
+    color: #19680f;
+    padding: 20px 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:3px ;
+}
+
+.logoimage {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:  30px;
+}
+
+nav ul li a {
+    color:white ;
+    font-weight: 600px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: serif;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: orangered;
+    border: 10px;
+    border-radius: 10px;
+}
+
+.addon-container h2{
+    color: black;
+
+}
+
+.addon-container{
+    display: flex;
+    color: hsl(0, 0%, 100%);
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 50px 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.addon-products{
+    flex:  2;
+    min-width: 320px;
+}
+
+.addon-checkboxes{
+    background:black ;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+footer{
+    background-color: #000000;
+    color: #fc6006;
+    padding: 20px 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:3px ;
+}
+
+footer p{
+    background-color: #000000;
+    color: #fc6006;
+    padding: 20px 50px;
+    border-bottom:3px ;
+}
+
