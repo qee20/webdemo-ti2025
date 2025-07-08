@@ -1,0 +1,143 @@
+:root{
+    --primary: #121224;
+    --secondary: #121224;
+    --background: #121224;
+    --background-alt: #0c0cec;
+    --text-light: #eee;
+    --text-muted: #020080;
+    --border-color: #0400ff
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #008000;
+    border-bottom: 3px solid color(srgb red green blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body{
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    color: #000000;
+    flex-direction: column;
+}
+
+.logoimgae{
+    width: 20x;
+    height: 10px;
+    padding: 0;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding-bottom: 10px;
+    margin-top: 00px;
+    padding-right: 10px;
+}
+
+nav ul li a{
+    color: #FFFFFF;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.formcontainer{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+nav ul li a:hover{
+    color: #FFFF00;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-group{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: #222;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: border-color 0.mss ease;
+    resize: vertical;
+}
+
+.form-group input;:focus,
+.form-group textarea;:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.submit-btn,
+.print-btn{
+    width: 100%;
+}
+
+.invoice-container{
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px;
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.invoice-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid;
+
+}
+
+.invoice-details div{
+    font-size: 0.9rem;
+}
+
+.order-items{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin:20px 15px 40px;
+        padding: 0 10px;
+    }
+}

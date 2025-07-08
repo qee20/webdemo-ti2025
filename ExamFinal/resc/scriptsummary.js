@@ -18,3 +18,8 @@ document.getElementById('customerForm').addEventListener('submit', function (e) 
 function generateInvoice(customerData) {
    
 }
+
+@param {number} amount
+@returns {string}
+function formatRupiah(amount)
+return'Rp' + amount.toString().replace(/\B(?=(d{3})+(?!d))/g, '.');
