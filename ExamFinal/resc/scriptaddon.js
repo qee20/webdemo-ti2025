@@ -21,12 +21,24 @@ function displaySelectedProduct() {
 
 // Display addon checkboxes
 function displayAddonProducts() {
-   
+   const container = document.getElementById("addOnProducts");
+   addOnProducts.forEach(addon => {
+    const div = document.createElement("div");
+    div.className = "addons-item";
+    div.innerHTML=`
+    <label>
+    <input type="checkbox" value ="{$addon.id}" data-price = "{$addon.price}">
+    ${addon.name} - $(formatRupiah(addon.price)})
+    </label>
+    `;
+    container.appendChild(div);
+   });
+   container.addEventListener("change",updateOrderSummary);
 }
 
 // Update the order summary
 function updateOrderSummary() {
-    
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
 }
 
 // Confirm order button
