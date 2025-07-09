@@ -22,21 +22,7 @@ function displayFeaturedProduct() {
     const productContainer = document.getElementById('theproducts')
     productContainer.innerHTML = ''
 
-    featuredProduct.forEach(product => {
-        const productCard = document.createElement('div')
-        productCard.className = 'product-card'
-        productCard.innerHTML = `
-        <div>
-        <img class="productimg" src=${product.imgfile}>
-        <h3>${product.name}</h3>
-        </div>
-        <div>
-        <p class="product-price">${formatRupiah(product.price)}</p>
-        <button class="catbtn" data-id="${product.id}">Pre Order</button>
-        </div>
-        `;
-        productContainer.appendChild(productCard)
-    })
+    
     document.querySelectorAll('.catbtn').forEach(button => {
         button.addEventListener('click', (e) => {
             const productId = e.target.dataset.id;

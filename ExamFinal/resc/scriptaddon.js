@@ -10,7 +10,7 @@ const addOnProducts = [
 
 // Get the selected product from localStorage
 const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
-let selectedAddons = [];
+let selectedAddons = [ featuredProduct.find(p => p.id === productId)];
 
 // Display the selected laptop
 function displaySelectedProduct() {
