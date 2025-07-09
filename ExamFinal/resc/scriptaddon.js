@@ -14,7 +14,9 @@ let selectedAddons = [];
 
 // Display the selected laptop
 function displaySelectedProduct() {
-    
+    const product = JSON.parse(localStorage.getItem("theproducts"));
+    const container = document.getElementById("theproducts");
+    if(!product || !container) return;
 }
 
 // Display addon checkboxes

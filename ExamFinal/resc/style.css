@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+.logoimage {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.hero {
+    background-size: cover;
+    padding: 15px 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-image:
+    linear-gradient(rgba(201, 240, 25, 0.603), rgba(0, 0, 0, 0.877)),
+    url(/ExamFinal/images/hero.jpg); 
+    background-blend-mode: multiply; 
+}
+.hero h1{
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+
+.hero h3 {
+    padding-bottom: 1.5rem;
+}
+
+button {
+    padding: 0.5rem;
+    border: 2px solid black;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #114866;
+}
+
+.featuredproduct h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 1rem;
+    animation: rgbText 3s infinite alternate;
+}
+
+@keyframes rgbText {
+    0%   { color: #ff1744; }   /* Merah terang */
+    25%  { color: #00e676; }   /* Hijau neon */
+    50%  { color: #2979ff; }   /* Biru terang */
+    75%  { color: #f50057; }   /* Pink */
+    100% { color: #00bcd4; }   /* Cyan */
+}
+
+
+.theproducts {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 2rem;
+}
+
+.theproducts:hover{
+    transform: translateY(-5px);
+}
+
+.theproducts img {
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 0 15px rgba(16, 17, 17, 0.4);
+}
+
+footer {
+    color: rgb(255, 115, 0);
+    background-color: black;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+footer p {
+    padding-bottom: 2rem;
+}
+
+.addon-container{
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.addOnProducts{
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(155, 39, 176, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
