@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'orbitron', sans-serif;
+}
+body{
+    background: white;
+    line-height: 1.6;
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: green;
+    padding: 20px 50px;
+}
+.logoimage{
+    width: 130px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+nav ul li a{
+    color: #ffff;
+    font-weight: 600px;
+    text-decoration: none;
+    transition: 0.3 ease;
+    padding: 5px;
+}
+nav ul li a:hover{
+    background: orange;
+    padding: 5px;
+    border-radius: 5px;
+}
+.hero{
+    padding: 80px 20px;
+    text-align: center;
+}
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+.hero h3{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+.catbtn{
+    background: orange;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+.catbtn:hover{
+    background-color: darkorange;
+}
+.featuredproduct h2{
+    text-align: center;
+}
+.featuredproduct{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-left: 10%;
+    background: #121224;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    color: #ffff;
+}
+.theproducts{
+    background: #ffff;
+    border-radius: 10px;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    color: #121224;
+}
+.theproducts:hover{
+    transform: translateY(-5px);
+}
+.theproducts img{
+    width: 150px;
+    height: 150px;
+
+}

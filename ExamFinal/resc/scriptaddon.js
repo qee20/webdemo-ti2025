@@ -8,18 +8,52 @@ const addOnProducts = [
     { id: 7, name: 'Kiip Laptop Stand Usb Hub', price: 820999, imgfile: './images/laptopstand.webp' },
 ]
 
+const productsGrid = document.getElementById('theproducts')
+const cartItems = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const resetCartBtn = document.getElementById('resetcart');
+
 // Get the selected product from localStorage
 const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
 let selectedAddons = [];
 
 // Display the selected laptop
 function displaySelectedProduct() {
-    
+    selectedProductdisplay.innerHTML = '';
+    products.forEach(product => {
+        const productCard = document.createElement('div')
+        productCard.className = 'product-card'
+        productCard.innerHTML = `
+        <h3>${product.name}</h3>
+        <img src=${product.imgfile}>
+        <p class="product-price">${formatRupiah(product.price)}</p>
+        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+        `;
+        productsGrid.appendChild(productCard)
+    })
 }
 
 // Display addon checkboxes
 function displayAddonProducts() {
-   
+    const productContainer = document.getElementById('theproducts')
+    productContainer.innerHTML = ''
+
+    featuredProduct.forEach(product => {
+        const productCard = document.createElement('div')
+        productCard.className = 'product-card'
+        productCard.innerHTML = `
+        <div>
+        <img class="productimg" src=${product.imgfile}>
+        <h3>${product.name}</h3>
+        </div>
+        <div>
+        <p class="product-price">${formatRupiah(product.price)}</p>
+        <button class="catbtn" data-id="${product.id}">Pre Order</button>
+        </div>
+        `;
+        productContainer.appendChild(productCard)
+    })
 }
 
 // Update the order summary
