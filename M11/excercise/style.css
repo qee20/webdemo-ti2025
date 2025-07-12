@@ -1,0 +1,118 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+/* Submenu */
+.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.has-submenu:hover>.submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.submenu li a:hover {
+    background-color: #666;
+}
+
+/* Submenu dalam submenu */
+.submenu .has-submenu:hover>.submenu {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+/* Responsive */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    padding: 14px 20px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .has-submenu .submenu {
+        position: static;
+    }
+
+    .submenu .has-submenu .submenu {
+        position: static;
+    }
+
+    .has-submenu:hover>.submenu,
+    .submenu .has-submenu:hover>.submenu {
+        display: none;
+    }
+
+    /* Aktifkan menu dan submenu di mobile */
+    .menu.active {
+        display: flex;
+    }
+
+    .has-submenu .submenu.active {
+        display: block;
+    }
+
+}

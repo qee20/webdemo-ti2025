@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Nusantara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">KulinerNusantara</div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Keajaiban Rasa Nusantara</h1>
+            <p>Telusuri Warisan Kuliner Indonesia</p>
+        </div>
+    </section>
+
+    <section class="menu-container" id="menu">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Rekomendasi Menu</h2>
+        <div class="cards-wrapper">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://padianfoods.co.uk/wp-content/uploads/2019/04/beef-rendang.jpg" alt="Rendang" class="card-img">
+                        <h3>Rendang</h3>
+                        <p>Klik untuk detail</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Rendang Padang</h3>
+                        <p>Daging sapi dimasak perlahan dengan rempah-rempah khas Minangkabau hingga empuk dan meresap</p>
+                        <div class="price">Rp 45.000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://cdn.idntimes.com/content-images/community/2021/07/fromandroid-86269467e96ca5104302bc21ee5f8a22.jpg" alt="Sate" class="card-img">
+                        <h3>Sate Madura</h3>
+                        <p>Klik untuk detail</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Sate Madura</h3>
+                        <p>Daging ayam atau kambing dibakar dengan bumbu kacang khas dan kecap manis</p>
+                        <div class="price">Rp 35.000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://icone-inc.org/wp-content/uploads/2018/11/Soto-Ayam-2-micita.jpeg" alt="Soto" class="card-img">
+                        <h3>Soto Betawi</h3>
+                        <p>Klik untuk detail</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Soto Betawi</h3>
+                        <p>Kuah santan gurih dengan daging sapi, jeroan, dan rempah-rempah khas Jakarta</p>
+                        <div class="price">Rp 30.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            hero.style.transform = `scale(${1 + scrolled * 0.0005})`;
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.onkeydown = function(e) {
+  if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+    return false;
+  }
+};
+</script>
+</body>
+</html>
+

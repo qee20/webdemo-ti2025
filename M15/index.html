@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+        function Home() {
+            return <h1>Ini Halaman Home</h1>;
+        }
+
+        function About() {
+            return <h1>Ini Halaman About</h1>;
+        }
+
+        function NotFound() {
+            return <h1>404 - Halaman Tidak Ditemukan</h1>;
+        }
+
+        function App() {
+            const [route, setRoute] = React.useState(window.location.pathname);
+
+            React.useEffect(() => {
+                // Listen for back/forward navigation
+                const onPopState = () => {
+                    setRoute(window.location.pathname);
+                };
+
+                window.addEventListener('popstate', onPopState);
+                return () => window.removeEventListener('popstate', onPopState);
+            }, []);
+
+            const navigate = (path) => {
+                window.history.pushState({}, "", path);
+                setRoute(path);
+            };
+
+            let Component;
+            switch (route) {
+                case "/":
+                    Component = Home;
+                    break;
+                case "/about":
+                    Component = About;
+                    break;
+                default:
+                    Component = NotFound;
+            }
+
+            return (
+                <div>
+                    <nav>
+                        <button onClick={() => navigate("/")}>Home</button>
+                        <button onClick={() => navigate("/about")}>About</button>
+                    </nav>
+                    <hr />
+                    <Component />
+                </div>
+            );
+        }
+
+        const container = document.getElementById("root");
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+
+</body>
+
+</html>

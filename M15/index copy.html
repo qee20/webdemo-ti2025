@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Jquery Test</title>
+    <style>t
+        .objcontainer{
+            border: 2px solid black;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 10px;
+        }
+        .objcontainer:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="hasildata" id="hasildata"></div>
+
+    <script>
+        var someData = [
+            {
+                "name" : "Humarojor",
+                "age" : 30,
+                "city" : "Aek Borbor"
+            },
+            {
+                "name" : "Alex",
+                "age" : 15,
+                "city" : "London"
+            },
+            {
+                "name" : "Jon Bovi",
+                "age" : 45,
+                "city" : "Kinjax"
+            }
+        ]
+
+        var rangkaianHtml = ''
+        $.each(someData, function(index, item){
+            rangkaianHtml += `
+            <div class="objcontainer">
+                <p>Number : ${index+1} </p>
+            <p>Name : ${item.name} </p>
+            <p>Age : ${item.age} </p>
+            <p>City : ${item.city} </p>
+            </div>
+            `
+        })
+        $('#hasildata').html(rangkaianHtml)
+    </script>
+</body>
+</html>

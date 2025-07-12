@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Daftar</title>
+</head>
+
+<body>
+  <main>
+    <div>
+      <h1>Pendaftaran Akun</h1>
+    </div>
+    <div>
+      <div class="formgroup">
+        <label class="labelfrom">Nama Lengkap</label>
+        <input id="fullname" name="fullname" type="text"/>
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Tempat dan Tanggal Lahir</label>
+        <input class="birthplace" id="birthplace" name="birthplace" type="text" />
+        <input id="birthdate" name="birthdate" type="date" />
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Jenis Kelamin</label>
+        <div class="rdbGroup">
+          <input id="rdblaki" name="rdblaki" type="radio" />
+          <label class="labelRdb" for="rdblaki">Laki-laki</label>
+        </div>
+        <div class="rdbGroup">
+          <input id="rdbprm" name="rdbprm" type="radio" />
+          <label class="labelRdb" for="rdbprm">Perempuan</label>
+        </div>
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Alamat</label>
+        <input id="address" name="address" type="text" />
+      </div>
+       <div class="formgroup">
+        <label class="labelfrom">Alamat Email</label>
+        <input id="email" name="email" type="email" />
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Username</label>
+        <input id="username" name="username" type="text" />
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Password</label>
+        <input id="password" name="password" type="password" />
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">No Hp</label>
+        <input id="phone" name="phone" type="tel" />
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Umur</label>
+        <input id="age" name="age" type="number" />
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Pendidikan Terakhir</label>
+        <select id="education" name="education">
+          <option>TK</option>
+          <option>SD</option>
+          <option>SMP</option>
+          <option>SMA/SMK</option>
+          <option>D3</option>
+          <option>S1</option>
+        </select>
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Hobi</label>
+        <div class="chkGroup">
+          <input id="chkMenonton" name="chkMenonton" type="checkbox" />
+          <label class="labelCheck" for="chkMenonton">Streaming Film</label>
+        </div>
+        <div class="chkGroup">
+          <input id="chkGame" name="chkGame" type="checkbox" />
+          <label class="labelCheck" for="chkGame">Main Game</label>
+        </div>
+        <div class="chkGroup">
+          <input id="chkMusik" name="chkMusik" type="checkbox" />
+          <label class="labelCheck" for="chkMusik">Streaming Musik</label>
+        </div>
+      </div>
+      <div class="formgroup">
+        <label class="labelfrom">Warna Kesukaan</label>
+        <input id="color" name="color" type="color" />
+      </div>
+      <button id="submitForm" class="btnSubmit" type="submit">Submit</button>
+    </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
